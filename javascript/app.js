@@ -246,9 +246,53 @@ console.log(oddBonds);
 
 
 
-
 // 7. Determine the total cumulative gross of the Bond franchise, and console.log the result.
 // Hint: To make the grosses into usable numbers, look into the .replace Javascript method (there are many ways to do this, however). Look into parseInt() also.
+
+// Empty array to hold the $money strings
+let grossBonds = [];
+
+// Set totalGross to 0 
+let totalGross = 0;
+
+// Add Bond films gross strings to above array
+for (let i = 0; i < bondFilms.length; i++) {
+	grossBonds.push(bondFilms[i].gross);
+}
+
+console.log(grossBonds); // TEST
+
+// Make function to turn strings into numbers
+const numify = (str) => {
+
+	// Make a variable that will hold all the digits as string is being numified (getting rid of $ and ,)
+	let digits = "";
+
+	// Iterate through the string
+	for (let i = 0; i < str.length; i++) {
+		// If str digit between 0 and 9, add it to /digits/
+		if (str[i] !== "$" && str[i] !== ",") {
+			digits += str[i];
+		}
+	}
+
+	// Turn whats in /digits/ from string to number and return it
+	return Number(digits);
+}
+
+// Loop through grossBonds
+for (let i = 0; i < grossBonds.length; i++) {
+	// Make strings into number by calling numify()
+	totalGross += numify(grossBonds[i]);
+}
+console.log(totalGross); // TEST
+
+// Make totalGross into a $...,...,... again
+
+// Make into string with commas
+totalGross = totalGross.toLocaleString();
+
+console.log(`Total cumulative gross of the Bond franchise: $${totalGross}.`);
 
 ////////////////////////////////////////////
 // 🔴 Commit: "bond films gross"
