@@ -299,8 +299,60 @@ console.log(`Total cumulative gross of the Bond franchise: $${totalGross}.`);
 
 
 
-
 // Congrats! You have completed the homework
+
+
+
+// Hungry For More?
+
+
+// Console log the single movie object that contains the actor who starred in the least number of films.
+// Expected result:
+
+// { 
+//   "title" : "On Her Majesty's Secret Service", 
+//   "year" : 1969, 
+//   "actor" : "George Lazenby", 
+//   "gross" : "$505,899,782" 
+// }
+
+// hint: Objects by definition have unique keys. Later in the problem you could create a new object wherein all the Bond actors are keys, and unique, with no doubles. hint within a hint: If you need to iterate over an object, remember you can use Object.keys() or a for ... in loop
+
+// Make an array that will hold objects (actor names as keys and the number of times they appear as their value)
+let actors = [];
+
+// Make a loop to go through bondFilms
+for (let i = 0; i < bondFilms; i++) {
+
+	// In the array actors I've created
+	for (let j = 0; j <= actors.length; j++) {
+
+		// If the actor is in the actors array already
+		if (bondFilms[i].actor == Object.keys(actors)[j]){
+
+			 // Then value +=1
+			actors.bondFilms[i][actor]++;
+
+		// If not, add name to array with value 1
+		} else {
+			actors.bondFilms[i][actor] = 0;
+		}
+	}
+}
+
+console.log(actors);
+
+// Not comfy with objects/arrays yet, must and will practice more
+
+////////////////////////////////////////////
+// 🔴 Commit "humdinger"
+
+
+
+
+
+
+
 
 
 
