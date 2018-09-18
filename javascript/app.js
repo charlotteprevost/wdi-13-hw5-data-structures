@@ -68,6 +68,7 @@ console.log(spaceship); // TEST
 console.log(studentNames); // TEST
 console.log(studentNames2); // TEST
 console.log(studentNames3); // TEST
+
 ////////////////////////////////////////////
 // 🔴 Commit: "data types"
 
@@ -93,6 +94,7 @@ let cha = {
 
 // Write code that will access your hobby from the object that you just created.
 console.log(cha.hobby);
+
 ////////////////////////////////////////////
 // 🔴 Commit: "data structures"
 
@@ -149,13 +151,40 @@ console.log(crazyObject.larry.nicknames[1]);
 
 // The object the contains the name funkhauser
 console.log(crazyObject.larry.characters[1]);
+
 ////////////////////////////////////////////
 // 🔴 Commit: "crazyObject"
 
 
 
 
+// 4. Object-ception
 
+// With the following object:
+
+const inception = {
+   reality: {
+       dreamLayer1: {
+           dreamLayer2: {
+               dreamLayer3: {
+                   dreamLayer4: {
+                       dreamLayer5: {
+                           dreamLayer6: {
+                               limbo: "Joseph Gordon Levitt"
+                          }
+                       }
+                   }
+               }
+           }
+       }
+   }
+}
+// Change the value of limbo to null.
+inception.reality.dreamLayer1.dreamLayer2.dreamLayer3.dreamLayer4.dreamLayer5.dreamLayer6.limbo = null;
+console.log(inception); // TEST
+
+////////////////////////////////////////////
+// 🔴 Commit: "object-ception"
 
 
 
